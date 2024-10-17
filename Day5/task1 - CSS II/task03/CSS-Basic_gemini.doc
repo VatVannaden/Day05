@@ -1,0 +1,70 @@
+Sass: A Supercharged CSS
+Sass (Syntactically Awesome Stylesheets) is a CSS preprocessor that extends the capabilities of standard CSS. It introduces features like variables, nesting, mixins, functions, and more, making it easier to write maintainable and reusable stylesheets.   
+
+Key Differences Between Sass and Regular CSS
+Nesting: Sass allows you to nest selectors, making your code more readable and easier to understand.
+Variables: You can define variables to store values that can be reused throughout your stylesheet.
+Mixins: Mixins allow you to create reusable blocks of CSS code that can be included in multiple selectors.
+Functions: Sass includes built-in functions or allows you to define your own, providing more flexibility and control over your styles.
+Partials: Sass uses partial files (files with a .scss extension) to organize your stylesheets into smaller, more manageable components.
+Imports: Sass allows you to import partial files into your main stylesheet using the @import rule.
+Example: Sass with Nesting, Partials, and Imports
+main.scss:
+
+SCSS
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+.button {
+  @include button-style;
+  background-color: $primary-color;
+}
+Use code with caution.
+
+variables.scss:
+
+SCSS
+$primary-color: #333;
+Use code with caution.
+
+mixins.scss:
+
+SCSS
+@mixin button-style {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+Use code with caution.
+
+base.scss:
+
+SCSS
+body {
+  font-family: Arial, sans-serif;
+}
+Use code with caution.
+
+Compiled CSS:
+
+CSS
+body {
+  font-family: Arial, sans-serif;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #333;
+}
+Use code with caution.
+
+Notable Differences from Standard CSS:
+
+Nesting: The .button selector is nested within the @include button-style mixin, making the code more concise and readable.
+Variables: The $primary-color variable is defined in a separate partial file and used in the .button selector.
+Mixins: The button-style mixin is defined in a separate partial file and included in the .button selector using the @include directive.
+Partials and Imports: The variables, mixins, and base partial files are imported into the main.scss file using the @import rule.
+By using these features, Sass allows you to write more organized, maintainable, and efficient CSS code.

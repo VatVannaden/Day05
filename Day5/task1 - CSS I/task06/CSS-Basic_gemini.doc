@@ -1,0 +1,50 @@
+Styling Text and Fonts in CSS
+CSS provides a wide range of properties for customizing the appearance of text on web pages. Here are some common properties and an example demonstrating their usage:
+
+Properties
+font-family: Specifies the font to be used for the text.
+font-size: Sets the size of the text.
+font-weight: Controls the boldness of the text (e.g., normal, bold, bolder).
+text-align: Specifies the horizontal alignment of the text (e.g., left, center, right).
+color: Sets the color of the text.
+Example
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Styling Example</title>
+    <style>
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph of text.</p>
+    <p>This is another paragraph.</p>
+    <a href="https://example.com">Click here</a>
+</body>
+</html>
+Use code with caution.
+
+Explanation
+Heading (h1): The heading uses the Arial font, is 36 pixels in size, is bold, and is centered.
+Paragraph (p): The paragraphs use the Georgia font, are 18 pixels in size, have a line height of 1.5, and are justified (aligned to both the left and right margins).
+Link (a): The link text is blue and underlined.
+You can customize these properties to achieve various text styles that suit your design needs. For example, you can use different font families, adjust the font size and weight, and experiment with different text alignments to create visually appealing and readable content.

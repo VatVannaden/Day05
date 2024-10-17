@@ -1,0 +1,52 @@
+Definition of CSS
+Cascading Style Sheets (CSS) is a stylesheet language used for describing the presentation of a document written in HTML or XML. CSS controls the layout of multiple web pages all at once and allows developers to apply styles (like colors, fonts, spacing, and positioning) to HTML elements, making it essential for web development.
+
+Role of CSS in Web Development
+Separation of Content and Design: CSS separates content (HTML) from presentation, making it easier to manage and maintain web pages.
+Consistent Styling: Developers can create a uniform look across multiple pages of a website by linking them to the same CSS file.
+Responsive Design: CSS facilitates responsive design, allowing web pages to adapt to different screen sizes and orientations.
+Enhanced User Experience: By using CSS, developers can create visually appealing layouts and styles that improve the overall user experience.
+Simple HTML Document with Basic CSS
+Here's an example of a simple HTML document that includes a basic CSS stylesheet:
+
+HTML Document (index.html)
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CSS Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to My Web Page</h1>
+    <p>This is a simple paragraph demonstrating CSS styling.</p>
+</body>
+</html>
+CSS Stylesheet (styles.css)
+css
+Copy code
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333333;            /* Dark grey text color */
+    font-size: 16px;           /* Base font size */
+}
+
+h1 {
+    color: #4CAF50;            /* Green color for the header */
+    font-size: 24px;           /* Larger font size for the header */
+}
+Explanation of Each Part of the CSS Code
+body { ... }: This block styles the <body> element of the HTML document.
+
+background-color: #f0f0f0;: Sets the background color of the entire page to a light grey color. The hex code #f0f0f0 represents the color.
+color: #333333;: Changes the default text color to a dark grey, making the text easier to read against the light background.
+font-size: 16px;: Sets the base font size for the text in the body to 16 pixels.
+h1 { ... }: This block styles all <h1> (header 1) elements in the document.
+
+color: #4CAF50;: Changes the text color of the header to green using the hex code #4CAF50.
+font-size: 24px;: Increases the font size of the header to 24 pixels, making it stand out more prominently on the page.
+Conclusion
+In this example, the CSS rules defined in the styles.css file control the appearance of the HTML elements in the index.html document. By linking the CSS stylesheet, any changes made to the CSS will automatically reflect across all HTML documents that reference it, promoting a cohesive design and making maintenance easier.

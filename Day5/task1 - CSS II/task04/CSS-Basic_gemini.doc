@@ -1,0 +1,61 @@
+Using Variables and Functions in Sass
+Variables
+Variables in Sass allow you to store values that can be reused throughout your stylesheet. This makes it easier to maintain consistency and update your styles.
+
+Example:
+
+SCSS
+$primary-color: #333;
+$secondary-color: #666;
+
+.button {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+Use code with caution.
+
+In this example, $primary-color and $secondary-color are variables that can be used to define the colors of the button. If you need to change the primary color, you only need to update the variable, and all elements that use it will be automatically updated.
+
+Functions
+Sass functions allow you to create custom calculations or transformations on values. This can be useful for tasks like converting units, generating color shades, or creating complex calculations.
+
+Example:
+
+SCSS
+@function darken($color, $amount) {
+  @return rgba($color, 0, 0, 0) + $amount;
+}
+
+.button-hover {
+  background-color: darken($primary-color, 10%);
+}
+Use code with caution.
+
+In this example, the darken() function takes a color and an amount as input and returns a darker version of the color. It can be used to create hover effects or other dynamic styles.
+
+Inheritance in Sass
+Inheritance in Sass allows you to create a base stylesheet and then extend it to create more specific styles. This can help you avoid code duplication and make your stylesheets more organized.
+
+Example:
+
+SCSS
+.button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-button {
+  @extend .button;
+  background-color: $primary-color;
+  color: white;
+}
+
+.secondary-button {
+  @extend .button;
+  background-color: $secondary-color;
+  color: black;
+}
+Use code with caution.
+
+In this example, the .button class defines the base styles for all buttons. The .primary-button and .secondary-button classes extend the .button class and add their own specific styles. This allows you to avoid duplicating the common button styles.

@@ -1,0 +1,89 @@
+Inline, Internal, and External CSS: A Comparison
+Inline CSS
+Definition: Styles are directly applied to individual HTML elements using the style attribute within the opening tag.
+Example:
+
+HTML
+<h1 style="color: red; font-size: 36px;">This is a heading</h1>
+Use code with caution.
+
+Advantages:
+
+Quick and easy for simple style changes.
+Can be used for one-off or temporary styles. Disadvantages:
+Poor code organization and maintainability.
+Difficult to reuse styles across multiple elements.
+Not suitable for large-scale styling.
+Internal CSS
+Definition: Styles are defined within the <head> section of an HTML document using a <style> tag.
+Example:
+
+HTML
+<head>
+    <style>
+        h1 {
+            color: blue;
+            font-size: 24px;
+        }
+    </style>
+</head>
+Use code with caution.
+
+Advantages:
+
+Better code organization than inline CSS.
+Can be used to style multiple elements within the same document.
+Suitable for smaller projects or when you don't need to reuse styles across multiple pages. Disadvantages:
+Not ideal for large-scale projects with many styles.
+Difficult to maintain and reuse styles across multiple pages.
+External CSS
+Definition: Styles are defined in a separate .css file and linked to the HTML document using the <link> tag.
+Example:
+
+HTML
+<head>
+    <link rel="stylesheet"   
+ href="styles.css">
+</head>
+Use code with caution.
+
+Advantages:
+
+Best practice for large-scale projects.
+Excellent code organization and maintainability.
+Easy to reuse styles across multiple pages.
+Improves page load times by reducing duplicate code. Disadvantages:
+Requires additional setup and configuration.
+May slightly increase initial page load time if the CSS file is large.
+HTML Page Demonstrating All Three Methods
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Methods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="color: green; font-size: 40px;">Inline CSS</h1>
+    <h2 class="internal-heading">Internal CSS</h2>
+    <h1>External CSS</h1>
+</body>
+</html>
+Use code with caution.
+
+CSS
+/* styles.css */
+h1 {
+    color: orange;
+    font-size: 32px;
+}
+
+.internal-heading {
+    color: purple;
+    font-size: 28px;
+}
+Use code with caution.
+
+In this example, the first heading uses inline CSS, the second heading uses internal CSS, and the third heading uses external CSS. You can see how each method affects the styling of the elements.
+
+In general, external CSS is the preferred method for most web development projects due to its advantages in terms of organization, maintainability, and reusability. However, inline and internal CSS may be suitable for smaller projects or specific use cases.

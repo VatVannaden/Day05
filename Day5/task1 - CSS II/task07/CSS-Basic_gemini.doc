@@ -1,0 +1,76 @@
+CSS Grid System
+The CSS Grid Layout module provides a powerful and flexible way to arrange items on a grid. It's particularly useful for creating complex layouts that adapt well to different screen sizes.
+
+Key Concepts:
+
+Grid Container: The parent element that contains the grid items.
+Grid Item: The child elements within the grid container.
+Grid Track: A line within the grid that defines the spacing and size of the grid items.
+Grid Line: A point along a grid track.
+Implementation:
+
+Set the container to be a grid container:
+
+CSS
+.container {
+    display: grid;
+}
+Use code with caution.
+
+Define the grid structure:
+
+CSS
+.container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+Use code with caution.
+
+grid-template-columns defines the number and size of columns. repeat(auto-fit, minmax(200px, 1fr)) creates a flexible grid with a minimum column width of 200px and adjusts the number of columns based on the available space.
+grid-gap sets the spacing between grid items.
+Place grid items:
+
+CSS
+.item {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+Use code with caution.
+
+Responsive Layout with Breakpoints:
+
+CSS
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+Use code with caution.
+
+In this example, the grid layout adapts to different screen sizes using a media query. On screens smaller than 768px, the grid changes to a single-column layout.
+
+Additional Properties:
+
+grid-template-rows defines the number and size of rows.
+grid-template-areas allows for more complex layouts by assigning grid items to specific areas within the grid.
+justify-items and align-items control the alignment of grid items within their grid cells.
+Using Bootstrap's Grid System:
+
+Bootstrap provides a pre-built grid system based on CSS Grid Layout. You can use Bootstrap's classes to create responsive layouts without writing custom CSS. For example, to create a two-column layout on larger screens and a single-column layout on smaller screens, you can use the following classes:
+
+HTML
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">Column 1</div>
+        <div class="col-md-6">Column 2</div>
+    </div>
+</div>
+Use code with caution.
+
+Bootstrap's grid system handles the media queries and responsive adjustments for you, making it easier to create responsive layouts.

@@ -1,0 +1,106 @@
+CSS Selectors
+CSS selectors are patterns used to select the elements you want to style in an HTML document. They determine which HTML elements will be affected by the CSS rules. Here’s a breakdown of some common types of selectors:
+
+Element Selector: Targets elements by their tag name.
+
+Example: h1 { ... } targets all <h1> elements.
+Class Selector: Targets elements with a specific class attribute.
+
+Example: .example { ... } targets all elements with the class example.
+ID Selector: Targets a specific element with a unique ID attribute.
+
+Example: #unique { ... } targets the element with the ID unique.
+Attribute Selector: Targets elements based on the presence or value of a specific attribute.
+
+Example: [type="text"] { ... } targets all elements with the attribute type equal to text.
+Pseudo-class Selector: Targets elements based on their state or position.
+
+Example: a:hover { ... } targets <a> elements when the mouse hovers over them.
+Example HTML Document with Various Selectors
+Here’s an example HTML document that uses different types of selectors:
+
+HTML Document (index.html)
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Example</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+</head>
+<body>
+    <h1 class="main-title">Welcome to CSS Selectors</h1> <!-- Class Selector -->
+    <p id="intro">This is an example of using various CSS selectors.</p> <!-- ID Selector -->
+    <p class="content">This paragraph is styled with a class selector.</p> <!-- Class Selector -->
+    <input type="text" name="username" placeholder="Enter your username"> <!-- Attribute Selector -->
+    <input type="password" name="password" placeholder="Enter your password"> <!-- Attribute Selector -->
+    <a href="#" class="link">Hover over me!</a> <!-- Class Selector -->
+    <a href="#">Regular link</a>
+</body>
+</html>
+CSS Stylesheet (styles.css)
+css
+Copy code
+/* Element Selector */
+h1 {
+    color: darkblue; /* Styles all <h1> elements */
+    font-size: 24px; /* Sets font size */
+}
+
+/* Class Selector */
+.main-title {
+    text-align: center; /* Center aligns text for class "main-title" */
+}
+
+.content {
+    font-style: italic; /* Italicizes text for class "content" */
+}
+
+.link {
+    color: green; /* Sets link color */
+    text-decoration: none; /* Removes underline */
+}
+
+/* ID Selector */
+#intro {
+    font-weight: bold; /* Makes the text bold for ID "intro" */
+    margin-bottom: 20px; /* Adds space below the paragraph */
+}
+
+/* Attribute Selector */
+input[type="text"], input[type="password"] {
+    width: 100%; /* Makes input fields full width */
+    padding: 10px; /* Adds padding for better appearance */
+    margin: 5px 0; /* Adds vertical space between fields */
+}
+
+/* Pseudo-class Selector */
+.link:hover {
+    color: red; /* Changes link color on hover */
+}
+Explanation of Selectors and Their Targeting
+Element Selector (h1):
+
+Targets: All <h1> elements in the document.
+Effect: Changes the text color to dark blue and sets the font size.
+Class Selector (.main-title, .content, .link):
+
+.main-title: Centers the text for the element with this class.
+.content: Italicizes any paragraph with the class content.
+.link: Sets the color of links with this class to green and removes the underline.
+ID Selector (#intro):
+
+Targets: The specific <p> element with the ID intro.
+Effect: Makes the text bold and adds a bottom margin for spacing.
+Attribute Selector (input[type="text"], input[type="password"]):
+
+Targets: All <input> elements with the type attribute equal to text or password.
+Effect: Sets the width of the input fields to 100%, adds padding for aesthetics, and creates vertical space between them.
+Pseudo-class Selector (.link:hover):
+
+Targets: The <a> elements with the class link when hovered over.
+Effect: Changes the link color to red when the mouse is over it.
+Conclusion
+CSS selectors are powerful tools that allow developers to apply styles to specific elements or groups of elements within an HTML document. By using various types of selectors, you can achieve precise control over the presentation and design of your web pages.

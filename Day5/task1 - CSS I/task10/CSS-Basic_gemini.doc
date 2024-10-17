@@ -1,0 +1,67 @@
+CSS Box Model
+The CSS box model represents each HTML element as a box made up of four components:
+
+Content: The actual content of the element (text, images, etc.).
+Padding: The space between the content and the border.
+Border: The outline of the element.
+Margin: The space outside the border, separating the element from other elements.
+The total width and height of an element are calculated as follows:
+
+width = content width + padding left + padding right + border left + border right + margin left + margin right;
+height = content height + padding top + padding bottom + border top + border bottom + margin top + margin bottom;   
+
+Example HTML Layout and Styling
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model Example</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">This is a box</div>
+</body>
+</html>
+Use code with caution.
+
+This HTML code creates a box element with the following dimensions:
+
+Content width: 200px - 10px (padding left) - 10px (padding right) - 1px (border left) - 1px (border right) = 178px
+Content height: 100px - 10px (padding top) - 10px (padding bottom) - 1px (border top) - 1px (border bottom) = 78px
+Visual Examples:
+
+Changing Padding:
+Opens in a new window
+css-tricks.com
+box with different padding values
+
+Increasing the padding will create more space between the content and the border.
+
+Changing Margin:
+Opens in a new window
+www.scaler.com
+box with different margin values
+
+Increasing the margin will create more space between the box and other elements.
+
+Changing Border:
+Opens in a new window
+www.w3.org
+box with different border styles, widths, and colors
+
+You can customize the border style, width, and color using the border-style, border-width, and border-color properties.
+
+By understanding the CSS box model and its components, you can effectively control the layout and spacing of elements on your web pages.
+
+
+Sources and related content
+github.com
+github.com

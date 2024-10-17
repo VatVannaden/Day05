@@ -1,0 +1,66 @@
+Aligning Elements in CSS
+CSS offers various methods to align elements horizontally and vertically within a container.
+
+Horizontal Alignment
+text-align property: Aligns the content within an element.
+left: Aligns text to the left.
+center: Centers the text.
+right: Aligns text to the right.
+justify: Justifies the text between the left and right margins.
+Vertical Alignment
+vertical-align property: Aligns elements vertically within their parent container.
+baseline: Aligns the baseline of the element with the baseline of the parent.
+top: Aligns the top of the element with the top of the parent.
+middle: Centers the element vertically within the parent.
+bottom: Aligns the bottom of the element with the bottom of the parent.
+Display Properties
+block: Elements are displayed as blocks, taking up the full width of their parent container and starting on a new line.
+inline: Elements are displayed inline, without starting on a new line.
+inline-block: Elements are displayed inline, but they can have their own width and height.
+flex: Elements are displayed as flex items within a flex container, allowing for flexible layout options.
+Example HTML Document
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alignment Example</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .vertical-middle {
+            display: flex;
+            align-items: center;
+        }
+
+        .inline-block {
+            display: inline-block;
+            border: 1px solid blue;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="text-center">Centered text</p>
+        <div class="vertical-middle">
+            <span>This text is vertically centered</span>
+            <img src="image.jpg" alt="Image">
+        </div>
+        <div class="inline-block">Inline block element</div>
+    </div>
+</body>
+</html>
+Use code with caution.
+
+Explanation
+Text Alignment: The paragraph with the text-center class is centered using the text-align property.
+Vertical Alignment: The div with the vertical-middle class uses the display: flex; property to create a flex container, and the align-items: center; property aligns the items within the container vertically.
+Inline Block: The div with the inline-block class is displayed inline but can have its own width and height, allowing it to be positioned next to other elements without starting on a new line.
+By combining these techniques, you can create various layouts and alignments for your web pages to achieve the desired visual effects.

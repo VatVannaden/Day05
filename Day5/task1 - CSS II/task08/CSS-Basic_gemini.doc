@@ -1,0 +1,78 @@
+Theming in CSS with Sass
+Theming in CSS refers to the process of creating different visual styles or skins for a website or application. It allows you to customize the appearance of your website without having to rewrite the entire CSS codebase.
+
+Sass is a CSS preprocessor that offers several features that make theming easier, including variables, nesting, and mixins. By using Sass variables to store theme-specific values, you can create themes that can be easily switched between.
+
+Creating a Theme Switcher
+Here's a basic example of a theme switcher using Sass variables:
+
+HTML:
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Switcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="theme-toggle">Toggle Theme</button>
+    <div class="content">
+        <h1>This is a heading</h1>
+        <p>This is some content.</p>
+    </div>
+</body>
+</html>
+Use code with caution.
+
+Sass (style.scss):
+
+Code snippet
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --background-color: #f0f0f0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+h1 {
+    color: var(--secondary-color);
+}
+
+#theme-toggle {
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.dark-theme {
+    --primary-color: #fff;
+    --secondary-color: #000;
+    --background-color: #333;
+}
+Use code with caution.
+
+JavaScript (script.js):
+
+JavaScript
+const themeToggle = document.getElementById('theme-toggle');
+const root = document.documentElement;
+
+themeToggle.addEventListener('click', () => {
+    root.classList.toggle('dark-theme');
+});
+Use code with caution.
+
+Explanation
+Sass Variables: The :root selector defines global variables for the primary and secondary colors, as well as the background color.
+Theme Styles: The body, h1, and #theme-toggle elements use these variables to set their styles.
+Dark Theme Class: The .dark-theme class overrides the default variable values, creating a dark theme.
+JavaScript: The JavaScript code toggles the .dark-theme class on the root element, switching between the light and dark themes.
+By using Sass variables and a JavaScript-based theme switcher, you can easily create and manage multiple themes for your website, allowing users to customize their experience.

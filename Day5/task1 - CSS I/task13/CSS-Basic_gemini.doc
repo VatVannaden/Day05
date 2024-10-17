@@ -1,0 +1,60 @@
+CSS Variables (Custom Properties)
+CSS variables (also known as custom properties) are a powerful feature introduced in CSS3 that allows you to define and reuse values throughout your stylesheet. They provide a flexible and efficient way to maintain consistency and make your CSS more maintainable.
+
+How CSS Variables Work
+Define variables: Use the -- prefix to define variables. For example, --primary-color: blue;.
+Use variables: Refer to variables using the var() function. For example, color: var(--primary-color);.
+Example: Using CSS Variables
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Variables Example</title>
+    <style>
+        :root {
+            --primary-color: blue;
+            --secondary-color: red;
+            --font-size: 18px;
+        }
+
+        .button {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-size: var(--font-size);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Click me</button>
+</body>
+</html>
+Use code with caution.
+
+Changing Variable Values
+To change the value of a CSS variable, you can modify its definition in the :root selector or use JavaScript to dynamically update it.
+
+Example using JavaScript:
+
+JavaScript
+const button = document.querySelector('.button');
+const root = document.documentElement;
+
+root.style.setProperty('--primary-color', 'green');
+root.style.setProperty('--secondary-color', 'white');
+root.style.setProperty('--font-size', '24px');
+Use code with caution.
+
+Explanation:
+
+The :root selector targets the root element of the HTML document.
+The setProperty() method is used to update the value of the specified variable.
+By changing the variable values, the styles of all elements that reference those variables will be automatically updated, ensuring consistency throughout your stylesheet.
+
+Benefits of CSS Variables
+Improved maintainability: By centralizing variable definitions, it's easier to make global changes to your styles.
+Enhanced flexibility: Variables allow you to create dynamic styles that can be easily customized.
+Better performance: Using variables can reduce the number of CSS rules that need to be recalculated, leading to improved performance.
+CSS variables are a valuable tool for creating efficient and maintainable stylesheets. By understanding how to define and use them, you can enhance the flexibility and customization of your web designs.

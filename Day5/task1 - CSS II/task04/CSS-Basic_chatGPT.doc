@@ -1,0 +1,153 @@
+Using Variables and Functions in Sass
+Variables in Sass allow you to store values (like colors, fonts, or dimensions) for reuse throughout your stylesheets, promoting consistency and maintainability. Functions in Sass enable you to create reusable calculations or manipulations of values.
+
+Declaring a Variable
+You can declare a variable using the $ symbol, followed by the variable name and its value.
+
+Example of Variable Declaration:
+
+scss
+Copy code
+$primary-color: #3498db;
+$font-stack: Helvetica, sans-serif;
+$padding: 15px;
+Using Variables
+Once declared, variables can be used in your styles as follows:
+
+scss
+Copy code
+.button {
+    background-color: $primary-color;
+    color: white;
+    padding: $padding;
+    font-family: $font-stack;
+}
+Creating a Function
+You can create functions in Sass to perform operations on values. For instance, a function to lighten a color can be useful to maintain color consistency throughout your design.
+
+Example of a Function:
+
+scss
+Copy code
+@function custom-lighten($color, $amount) {
+    @return lighten($color, $amount);
+}
+Using Functions
+You can use this function in your styles like this:
+
+scss
+Copy code
+.button {
+    background-color: custom-lighten($primary-color, 10%);
+    color: white;
+    padding: $padding;
+}
+Complete Example
+Here's a complete example that demonstrates the use of variables and functions in Sass:
+
+scss
+Copy code
+// Declare variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: Helvetica, sans-serif;
+$padding: 15px;
+
+// Function to lighten a color
+@function custom-lighten($color, $amount) {
+    @return lighten($color, $amount);
+}
+
+// Using variables and functions in styles
+.button {
+    background-color: $primary-color;
+    color: white;
+    padding: $padding;
+    font-family: $font-stack;
+
+    &:hover {
+        background-color: custom-lighten($primary-color, 10%);
+    }
+}
+
+.success {
+    background-color: $secondary-color;
+    color: white;
+    padding: $padding;
+}
+Compiled CSS Output
+After compiling, the resulting CSS will look like this:
+
+css
+Copy code
+.button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    font-family: Helvetica, sans-serif;
+}
+
+.button:hover {
+    background-color: #3cb0f1; /* Lightened primary color */
+}
+
+.success {
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px;
+}
+Concept of Inheritance in Sass
+Inheritance in Sass allows you to share styles between selectors, promoting DRY (Don't Repeat Yourself) principles. You can achieve this using the @extend directive. When one selector extends another, it inherits the styles of the extended selector.
+
+Example of Inheritance
+scss
+Copy code
+// Base button styles
+.button {
+    padding: $padding;
+    border: none;
+    border-radius: 5px;
+    font-family: $font-stack;
+}
+
+// Primary button
+.primary-button {
+    @extend .button;
+    background-color: $primary-color;
+    color: white;
+}
+
+// Success button
+.success-button {
+    @extend .button;
+    background-color: $secondary-color;
+    color: white;
+}
+Compiled CSS Output for Inheritance
+After compilation, the resulting CSS will look like this:
+
+css
+Copy code
+.button,
+.primary-button,
+.success-button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+}
+
+.primary-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.success-button {
+    background-color: #2ecc71;
+    color: white;
+}
+Key Points to Note
+Variables help maintain consistency in styles by allowing reuse of the same value across different properties and selectors.
+Functions enable calculations and manipulations, which can enhance design consistency (like lightening or darkening colors).
+Inheritance through the @extend directive helps reduce redundancy in your CSS, making it easier to maintain and read.
+Using these features in Sass leads to cleaner, more efficient, and more maintainable stylesheets, which are crucial in larger projects.

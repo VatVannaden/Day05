@@ -1,0 +1,67 @@
+CSS Selectors: Targeting Elements
+CSS selectors are used to specify which HTML elements should be affected by a particular CSS rule. They act as a way to identify and target specific elements within an HTML document.
+
+Types of CSS Selectors
+Element Selectors: Target elements based on their tag name.
+Class Selectors: Target elements based on their class attribute.
+ID Selectors: Target elements based on their unique ID attribute.
+Attribute Selectors: Target elements based on their attributes.
+Pseudo-Class Selectors: Target elements based on their state or condition.
+Example HTML Document
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="my-heading">This is a heading</h1>
+    <p class="paragraph">This is a paragraph.</p>
+    <a href="https://example.com" class="link">Click here</a>
+    <div>
+        <span class="highlight">Highlighted text</span>
+    </div>
+</body>
+</html>
+Use code with caution.
+
+CSS Rules
+CSS
+/* styles.css */
+
+/* Element selector */
+h1 {
+    color: blue;
+    font-size: 36px;
+}
+
+/* Class selector */
+.paragraph {
+    font-style: italic;
+}
+
+/* ID selector */
+#my-heading {
+    text-align: center;
+}
+
+/* Attribute selector */
+a[href="https://example.com"] {
+    color: red;
+    text-decoration: none;
+}
+
+/* Pseudo-class selector */
+div:hover {
+    background-color: lightgray;
+}
+Use code with caution.
+
+Explanation of How Selectors Target Elements
+Element selector (h1): Targets all elements with the tag name <h1>.
+Class selector (.paragraph): Targets all elements with the class attribute "paragraph".
+ID selector (#my-heading): Targets the element with the ID attribute "my-heading". This ID should be unique within the document.
+Attribute selector (a[href="https://example.com"]): Targets all <a> elements with the href attribute equal to "https://example.com".
+Pseudo-class selector (div:hover): Targets the <div> element when the mouse hovers over it.
+By using these selectors, you can precisely target specific elements in your HTML document and apply the desired styles to them.
